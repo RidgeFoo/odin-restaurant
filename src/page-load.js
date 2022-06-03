@@ -39,7 +39,7 @@ const elements = (function () {
     const address = document.createElement("a");
     const attributions = document.createElement("div");
 
-    address.textContent = "Address";
+    address.textContent = "123 Fake Street, London, UK";
     attributions.textContent = "Photo and icon attributions go here!";
 
     footer.append(address, attributions);
