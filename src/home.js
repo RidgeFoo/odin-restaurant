@@ -2,7 +2,8 @@ import burger from "./images/burger-no-bg.png";
 
 const home = (function () {
   const container = document.createElement("div");
-  container.id = "content";
+  container.id = "home";
+  container.className = "main";
 
   const backgroundDiv = document.createElement("div");
   backgroundDiv.className = "background-image";

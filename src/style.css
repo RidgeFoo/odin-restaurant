@@ -13,6 +13,10 @@
 }
 
 body {
+  margin: 0;
+}
+
+#content {
   height: 100vh;
   margin: 0;
   display: grid;
@@ -21,15 +25,21 @@ body {
 
 nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 2fr;
+  grid-template-columns: max-content max-content 2fr max-content;
+  gap: 20px;
   align-items: center;
   padding: 10px 20px 10px 20px;
   background-color: forestgreen;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 a {
   cursor: pointer;
+}
+
+a:hover,
+#logo:hover {
+  color: red;
 }
 
 #logo {
@@ -82,7 +92,7 @@ footer {
   height: 300px;
 }
 
-#content {
+#home {
   display: flex;
   flex-direction: column;
   justify-content: center;

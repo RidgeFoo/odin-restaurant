@@ -36,7 +36,7 @@ const elements = (function () {
 
   function getFooter() {
     const footer = document.createElement("footer");
-    const address = document.createElement("a");
+    const address = document.createElement("p");
     const attributions = document.createElement("div");
 
     address.textContent = "123 Fake Street, London, UK";
