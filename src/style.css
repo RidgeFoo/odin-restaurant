@@ -9,6 +9,7 @@
   font-family: var(--font-family);
   color: black;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 body {
@@ -66,8 +67,8 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: invert(25%) sepia(60%) saturate(4167%) hue-rotate(320deg)
-    brightness(92%) contrast(100%);
+  filter: invert(27%) sepia(80%) saturate(4167%) hue-rotate(321deg)
+    brightness(92%) contrast(200%);
   position: fixed;
   left: 0;
   right: 0;
@@ -83,6 +84,16 @@ footer {
 
 #content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#hero {
+  margin: 0;
+  color: white;
+  padding-bottom: 20px;
+  font-size: 32px;
+  text-align: center;
+  white-space: pre;
 }
