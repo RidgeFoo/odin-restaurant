@@ -2,12 +2,12 @@
 
 :root {
   --font-family: "Rubik", sans-serif;
-  --super-color-font: black;
-  --super-color-nav: rgb(255, 235, 0);
-  --super-color-primary: rgba(200, 0, 0, 50%);
-  --super-color-secondary: rgba(0, 96, 170);
+  --color-dark: rgb(28, 33, 25);
+  --color-nav: rgb(255, 235, 0);
+  --color-divider: rgb(220, 148, 86);
+  --bg-dark: var(--color-dark);
   font-family: var(--font-family);
-  color: black;
+  color: var(--color-dark);
   box-sizing: border-box;
   text-transform: uppercase;
 }
@@ -44,7 +44,7 @@ a:hover,
 
 #logo {
   justify-self: center;
-  border: 3px var(--super-color-font) solid;
+  border: 3px var(--color-dark) solid;
   padding: 5px;
   display: flex;
   gap: 10px;
@@ -62,7 +62,7 @@ nav > a:last-child {
 
 footer,
 nav {
-  background-color: var(--super-color-nav);
+  background-color: var(--color-nav);
 }
 
 footer {
@@ -77,7 +77,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: invert(27%) sepia(80%) saturate(4167%) hue-rotate(321deg)
+  filter: invert(20%) sepia(80%) saturate(4167%) hue-rotate(321deg)
     brightness(92%) contrast(200%);
   position: fixed;
   left: 0;
@@ -106,4 +106,53 @@ footer {
   font-size: 32px;
   text-align: center;
   white-space: pre;
+}
+
+.google-map {
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+#contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#address {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark);
+  color: white;
+  font-size: 18px;
+}
+
+#address p {
+  margin: 0;
+}
+
+#address hr {
+  border: 2px solid var(--color-nav);
+  width: 60%;
+}
+
+.address-header {
+  font-size: 32px;
+}
+
+#opening-times {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#opening-times p:nth-child(2) {
+  color: var(--color-nav);
+  font-weight: bold;
+  font-size: 24px;
 }

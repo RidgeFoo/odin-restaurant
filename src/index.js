@@ -1,31 +1,30 @@
 import "./style.css";
-import { nav, footer } from "./page-load";
+import { getNavBar, getFooter } from "./page-load";
 import { home } from "./home";
+import { contact } from "./contact";
+
+const city = "London";
+const fullAddress = "98 Northcote Rd, London, SW11 6QW";
 
 let pageLoaded = false;
 const content = document.querySelector("#content");
 
 setupPage();
 
-function tabSwitching(destination) {
-  switch (destination) {
-    case "home":
-      content.replaceWith(home);
-      break;
-    case "menu":
-      content.replaceWith();
-      break;
-    case "contact":
-      content.replaceWith();
-      break;
+function setupPage() {
+  if (!pageLoaded) {
+    const navBar = getNavBar(
+      () => updateContent(home),
+      () => content.querySelector(".main").replaceWith(home),
+      () => updateContent(contact(city, fullAddress))
+    );
+    content.insertAdjacentElement("afterbegin", navBar);
+    content.append(home);
+    content.insertAdjacentElement("beforeend", getFooter(fullAddress));
+    pageLoaded = true;
   }
 }
 
-function setupPage() {
-  if (!pageLoaded) {
-    content.insertAdjacentElement("afterbegin", nav);
-    content.append(home);
-    content.insertAdjacentElement("beforeend", footer);
-    pageLoaded = true;
-  }
+function updateContent(elements) {
+  content.querySelector(".main").replaceWith(elements);
 }

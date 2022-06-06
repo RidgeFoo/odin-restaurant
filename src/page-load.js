@@ -1,9 +1,10 @@
 import burgerIcon from "./images/hamburger.png";
-let footer;
-let nav;
 
-const elements = (function () {
-  function getNavBar() {
+let getFooter;
+let getNavBar;
+
+const nav = (function () {
+  function getNavBar(homeCallbackFn, menuCallbackFn, contactCallbackFn) {
     let navBar = document.createElement("nav");
     let home = document.createElement("a");
     let menu = document.createElement("a");
@@ -12,6 +13,10 @@ const elements = (function () {
     home.textContent = "Home";
     menu.textContent = "Menu";
     contact.textContent = "Contact Us";
+
+    home.addEventListener("click", homeCallbackFn);
+    menu.addEventListener("click", menuCallbackFn);
+    contact.addEventListener("click", contactCallbackFn);
 
     navBar.append(home, menu, getLogoContainer(), contact);
     return navBar;
@@ -34,12 +39,12 @@ const elements = (function () {
     return logoContainer;
   }
 
-  function getFooter() {
+  function getFooter(fullAddress) {
     const footer = document.createElement("footer");
     const address = document.createElement("p");
     const attributions = document.createElement("div");
 
-    address.textContent = "123 Fake Street, London, UK";
+    address.textContent = fullAddress;
     attributions.textContent = "Photo and icon attributions go here!";
 
     footer.append(address, attributions);
@@ -47,10 +52,10 @@ const elements = (function () {
     return footer;
   }
 
-  return { nav: getNavBar(), footer: getFooter() };
+  return { getNavBar, getFooter };
 })();
 
-nav = elements.nav;
-footer = elements.footer;
+getNavBar = nav.getNavBar;
+getFooter = nav.getFooter;
 
-export { nav, footer };
+export { getNavBar, getFooter };
