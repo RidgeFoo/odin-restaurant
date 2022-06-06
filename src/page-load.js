@@ -1,4 +1,4 @@
-import burgerIcon from "./images/hamburger.png";
+import burgerIcon from "./images/burger-icon.png";
 
 let getFooter;
 let getNavBar;

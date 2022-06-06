@@ -1,4 +1,4 @@
-import burger from "./images/burger-no-bg.png";
+import imgBurger from "./images/beef-burger.png";
 
 const home = (function () {
   const container = document.createElement("div");
@@ -10,7 +10,7 @@ const home = (function () {
 
   const burgerDiv = document.createElement("img");
   burgerDiv.id = "burger-image";
-  burgerDiv.src = burger;
+  burgerDiv.src = imgBurger;
 
   const heroMessage = document.createElement("p");
   heroMessage.id = "hero";
