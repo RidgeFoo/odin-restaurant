@@ -134,7 +134,8 @@ footer {
   margin: 0;
 }
 
-#address hr {
+#address hr,
+#menu hr {
   border: 2px solid var(--color-nav);
   width: 60%;
 }
@@ -155,4 +156,29 @@ footer {
   color: var(--color-nav);
   font-weight: bold;
   font-size: 24px;
+}
+
+.menu-row {
+  display: grid;
+  grid-template-columns: 150px 250px max-content;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+.category img {
+  height: 150px;
+  justify-self: end;
+}
+
+.category h1 {
+  text-align: center;
+  color: white;
+}
+
+#menu {
+  overflow-y: auto;
+  background-color: var(--bg-dark);
+  color: white;
 }
