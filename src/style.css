@@ -182,3 +182,18 @@ footer {
   background-color: var(--bg-dark);
   color: white;
 }
+
+#attributions {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark);
+  color: white;
+}
+
+#attributions a {
+  text-decoration: none;
+  color: white;
+}

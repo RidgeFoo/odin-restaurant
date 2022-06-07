@@ -39,13 +39,15 @@ const nav = (function () {
     return logoContainer;
   }
 
-  function getFooter(fullAddress) {
+  function getFooter(fullAddress, attributionCallbackFn) {
     const footer = document.createElement("footer");
     const address = document.createElement("p");
-    const attributions = document.createElement("div");
+    const attributions = document.createElement("a");
+
+    attributions.addEventListener("click", attributionCallbackFn);
 
     address.textContent = fullAddress;
-    attributions.textContent = "Photo and icon attributions go here!";
+    attributions.textContent = "Photo & Icon Attributions";
 
     footer.append(address, attributions);
 

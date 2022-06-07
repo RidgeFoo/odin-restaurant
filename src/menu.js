@@ -1,5 +1,5 @@
 import beefBurger from "./images/beef-burger.png";
-import fishBurger from "./images/fish-burger.png";
+import chickenBurger from "./images/chicken-burger.png";
 import veggieBurger from "./images/veggie-burger.png";
 import cola from "./images/cola.png";
 import beer from "./images/beer.png";
@@ -30,7 +30,7 @@ const menuItems = (function () {
   const menu = {
     burgers: [
       new Burger("Beef", 16.75, beefBurger),
-      new Burger("Fish", 12.5, fishBurger),
+      new Burger("Chicken", 12.5, chickenBurger),
       new Burger("Veggie", 8.5, veggieBurger),
     ],
     drinks: [
